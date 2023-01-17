@@ -1,6 +1,5 @@
-# tree-sitter-imp
-IMP grammar for
-[tree-sitter](https://github.com/tree-sitter/tree-sitter).
+# tree-sitter-thorin
+Thorin grammar using [tree-sitter](https://github.com/tree-sitter/tree-sitter).
 
 ## Building
 ```ShellSession
@@ -9,4 +8,4 @@ $ npm run build && tree-sitter test
 
 
 ## References
-The grammar is based on the [BNF grammar for IMP](https://softwarefoundations.cis.upenn.edu/lf-current/Imp.html).
+The grammar is based on the [Thorin language reference](https://anydsl.github.io/thorin2/langref.html).

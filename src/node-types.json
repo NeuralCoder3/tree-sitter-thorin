@@ -1,170 +1,188 @@
 [
   {
-    "type": "andb",
+    "type": "L",
     "named": true,
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
-          "type": "andb",
+          "type": "bin",
           "named": true
         },
         {
-          "type": "eqb",
+          "type": "dec",
           "named": true
         },
         {
-          "type": "leb",
+          "type": "eE",
           "named": true
         },
         {
-          "type": "negb",
+          "type": "hex",
+          "named": true
+        },
+        {
+          "type": "oct",
+          "named": true
+        },
+        {
+          "type": "pP",
+          "named": true
+        },
+        {
+          "type": "s0b",
+          "named": true
+        },
+        {
+          "type": "s0o",
+          "named": true
+        },
+        {
+          "type": "s0x",
+          "named": true
+        },
+        {
+          "type": "sign",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "asgn",
+    "type": "ax",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "sym",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "b",
     "named": true,
     "fields": {
-      "name": {
+      "type": {
         "multiple": false,
-        "required": true,
+        "required": false,
         "types": [
           {
-            "type": "id",
+            "type": "e",
             "named": true
           }
         ]
       }
     },
     "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "id",
-          "named": true
-        },
-        {
-          "type": "minus",
-          "named": true
-        },
-        {
-          "type": "num",
-          "named": true
-        },
-        {
-          "type": "plus",
-          "named": true
-        },
-        {
-          "type": "times",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "eqb",
-    "named": true,
-    "fields": {},
-    "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "id",
+          "type": "b",
           "named": true
         },
         {
-          "type": "minus",
+          "type": "e",
           "named": true
         },
         {
-          "type": "num",
-          "named": true
-        },
-        {
-          "type": "plus",
-          "named": true
-        },
-        {
-          "type": "times",
+          "type": "sym",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "if",
+    "type": "d",
     "named": true,
     "fields": {
-      "alternative": {
+      "arity": {
         "multiple": false,
-        "required": true,
+        "required": false,
         "types": [
           {
-            "type": "stmt",
+            "type": "L",
             "named": true
           }
         ]
       },
-      "condition": {
-        "multiple": true,
-        "required": true,
+      "codom": {
+        "multiple": false,
+        "required": false,
         "types": [
           {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "andb",
+            "type": "e",
             "named": true
-          },
-          {
-            "type": "eqb",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "leb",
-            "named": true
-          },
-          {
-            "type": "negb",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
           }
         ]
       },
-      "consequent": {
+      "dom": {
         "multiple": false,
-        "required": true,
+        "required": false,
         "types": [
           {
-            "type": "stmt",
+            "type": "e",
+            "named": true
+          }
+        ]
+      },
+      "shape": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "e",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "e",
             "named": true
           }
         ]
       }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ax",
+          "named": true
+        },
+        {
+          "type": "e",
+          "named": true
+        },
+        {
+          "type": "n",
+          "named": true
+        },
+        {
+          "type": "p",
+          "named": true
+        },
+        {
+          "type": "sym",
+          "named": true
+        }
+      ]
     }
   },
   {
-    "type": "leb",
+    "type": "de",
     "named": true,
     "fields": {},
     "children": {
@@ -172,30 +190,138 @@
       "required": true,
       "types": [
         {
-          "type": "id",
+          "type": "d",
           "named": true
         },
         {
-          "type": "minus",
-          "named": true
-        },
-        {
-          "type": "num",
-          "named": true
-        },
-        {
-          "type": "plus",
-          "named": true
-        },
-        {
-          "type": "times",
+          "type": "e",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "minus",
+    "type": "e",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "e",
+            "named": true
+          }
+        ]
+      },
+      "codom": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "e",
+            "named": true
+          }
+        ]
+      },
+      "dom": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "e",
+            "named": true
+          }
+        ]
+      },
+      "index": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "e",
+            "named": true
+          }
+        ]
+      },
+      "shape": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "e",
+            "named": true
+          }
+        ]
+      },
+      "tuple": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "e",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "e",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "e",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "L",
+          "named": true
+        },
+        {
+          "type": "ax",
+          "named": true
+        },
+        {
+          "type": "b",
+          "named": true
+        },
+        {
+          "type": "de",
+          "named": true
+        },
+        {
+          "type": "e",
+          "named": true
+        },
+        {
+          "type": "p",
+          "named": true
+        },
+        {
+          "type": "sym",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "g",
     "named": true,
     "fields": {},
     "children": {
@@ -203,30 +329,56 @@
       "required": true,
       "types": [
         {
-          "type": "id",
+          "type": "e",
           "named": true
         },
         {
-          "type": "minus",
+          "type": "p",
           "named": true
         },
         {
-          "type": "num",
-          "named": true
-        },
-        {
-          "type": "plus",
-          "named": true
-        },
-        {
-          "type": "times",
+          "type": "sym",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "negb",
+    "type": "i",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "sym",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "m",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "d",
+          "named": true
+        },
+        {
+          "type": "i",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "n",
     "named": true,
     "fields": {},
     "children": {
@@ -234,26 +386,14 @@
       "required": false,
       "types": [
         {
-          "type": "andb",
-          "named": true
-        },
-        {
-          "type": "eqb",
-          "named": true
-        },
-        {
-          "type": "leb",
-          "named": true
-        },
-        {
-          "type": "negb",
+          "type": "o",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "plus",
+    "type": "o",
     "named": true,
     "fields": {},
     "children": {
@@ -261,45 +401,18 @@
       "required": true,
       "types": [
         {
-          "type": "id",
+          "type": "de",
           "named": true
         },
         {
-          "type": "minus",
-          "named": true
-        },
-        {
-          "type": "num",
-          "named": true
-        },
-        {
-          "type": "plus",
-          "named": true
-        },
-        {
-          "type": "times",
+          "type": "e",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "program",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "stmt",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "seq",
+    "type": "p",
     "named": true,
     "fields": {},
     "children": {
@@ -307,130 +420,30 @@
       "required": true,
       "types": [
         {
-          "type": "stmt",
+          "type": "b",
+          "named": true
+        },
+        {
+          "type": "e",
+          "named": true
+        },
+        {
+          "type": "g",
+          "named": true
+        },
+        {
+          "type": "sym",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "stmt",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "asgn",
-          "named": true
-        },
-        {
-          "type": "if",
-          "named": true
-        },
-        {
-          "type": "seq",
-          "named": true
-        },
-        {
-          "type": "skip",
-          "named": true
-        },
-        {
-          "type": "while",
-          "named": true
-        }
-      ]
-    }
+    "type": "#",
+    "named": false
   },
   {
-    "type": "times",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "id",
-          "named": true
-        },
-        {
-          "type": "minus",
-          "named": true
-        },
-        {
-          "type": "num",
-          "named": true
-        },
-        {
-          "type": "plus",
-          "named": true
-        },
-        {
-          "type": "times",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "while",
-    "named": true,
-    "fields": {
-      "body": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "stmt",
-            "named": true
-          }
-        ]
-      },
-      "condition": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "andb",
-            "named": true
-          },
-          {
-            "type": "eqb",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": false
-          },
-          {
-            "type": "leb",
-            "named": true
-          },
-          {
-            "type": "negb",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": false
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "&&",
+    "type": "%",
     "named": false
   },
   {
@@ -446,15 +459,115 @@
     "named": false
   },
   {
-    "type": "+",
+    "type": ",",
     "named": false
   },
   {
-    "type": "-",
+    "type": "->",
     "named": false
   },
   {
-    "type": ":=",
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": ".Arr",
+    "named": false
+  },
+  {
+    "type": ".Bool",
+    "named": false
+  },
+  {
+    "type": ".Idx",
+    "named": false
+  },
+  {
+    "type": ".Nat",
+    "named": false
+  },
+  {
+    "type": ".Pi",
+    "named": false
+  },
+  {
+    "type": ".Sigma",
+    "named": false
+  },
+  {
+    "type": ".Type",
+    "named": false
+  },
+  {
+    "type": ".Univ",
+    "named": false
+  },
+  {
+    "type": ".ax",
+    "named": false
+  },
+  {
+    "type": ".bot",
+    "named": false
+  },
+  {
+    "type": ".cn",
+    "named": false
+  },
+  {
+    "type": ".con",
+    "named": false
+  },
+  {
+    "type": ".def",
+    "named": false
+  },
+  {
+    "type": ".ff",
+    "named": false
+  },
+  {
+    "type": ".fn",
+    "named": false
+  },
+  {
+    "type": ".fun",
+    "named": false
+  },
+  {
+    "type": ".import",
+    "named": false
+  },
+  {
+    "type": ".ins",
+    "named": false
+  },
+  {
+    "type": ".lam",
+    "named": false
+  },
+  {
+    "type": ".let",
+    "named": false
+  },
+  {
+    "type": ".pack",
+    "named": false
+  },
+  {
+    "type": ".top",
+    "named": false
+  },
+  {
+    "type": ".tt",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": "::",
     "named": false
   },
   {
@@ -466,59 +579,99 @@
     "named": false
   },
   {
-    "type": "=<",
+    "type": "[",
     "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "_",
+    "named": false
+  },
+  {
+    "type": "bin",
+    "named": true
   },
   {
     "type": "comment",
     "named": true
   },
   {
-    "type": "do",
-    "named": false
-  },
-  {
-    "type": "else",
-    "named": false
-  },
-  {
-    "type": "end",
-    "named": false
-  },
-  {
-    "type": "false",
-    "named": false
-  },
-  {
-    "type": "id",
+    "type": "dec",
     "named": true
   },
   {
-    "type": "if",
-    "named": false
-  },
-  {
-    "type": "num",
+    "type": "eE",
     "named": true
   },
   {
-    "type": "skip",
+    "type": "hex",
     "named": true
   },
   {
-    "type": "then",
+    "type": "oct",
+    "named": true
+  },
+  {
+    "type": "pP",
+    "named": true
+  },
+  {
+    "type": "s0b",
+    "named": true
+  },
+  {
+    "type": "s0o",
+    "named": true
+  },
+  {
+    "type": "s0x",
+    "named": true
+  },
+  {
+    "type": "sign",
+    "named": true
+  },
+  {
+    "type": "sub",
+    "named": true
+  },
+  {
+    "type": "sym",
+    "named": true
+  },
+  {
+    "type": "{",
     "named": false
   },
   {
-    "type": "true",
+    "type": "}",
     "named": false
   },
   {
-    "type": "while",
+    "type": "«",
     "named": false
   },
   {
-    "type": "~",
+    "type": "»",
+    "named": false
+  },
+  {
+    "type": "Π",
+    "named": false
+  },
+  {
+    "type": "‹",
+    "named": false
+  },
+  {
+    "type": "›",
+    "named": false
+  },
+  {
+    "type": "□",
     "named": false
   }
 ]
