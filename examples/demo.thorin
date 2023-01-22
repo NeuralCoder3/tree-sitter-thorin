@@ -1,0 +1,1 @@
+.ax %demo.constIdx: Π [n:.Nat] -> .Idx n, normalize_const;
